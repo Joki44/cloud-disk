@@ -1,0 +1,91 @@
+.profile {
+  width: 0;
+  height: 0;
+}
+.profile__container {
+  top: 27px;
+  border: 2px solid #566885;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 220px;
+  right: 220px;
+  z-index: 9999;
+}
+.profile__info {
+  display: flex;
+  border-bottom: 1px solid #566885;
+}
+.profile__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.profile__firstName,
+.profile__lastName {
+  margin: 13px 2px;
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  text-transform: capitalize;
+}
+.profile__btns {
+  margin: 7px 0;
+}
+.profile__upload {
+  height: 35px;
+  width: 100%;
+}
+.profile__upload:hover {
+  background-color: #E9E6E6;
+}
+.profile__upload-label {
+  font-family: 'Roboto', sans-serif;
+  padding: 7px 0 7px 20px;
+}
+.profile__upload-label img {
+  position: relative;
+  top: 5px;
+  height: 22px;
+  width: 22px;
+  margin-right: 9px;
+}
+.profile__upload-input {
+  display: none;
+}
+.profile__delete,
+.profile__logout {
+  height: 35px;
+  width: 100%;
+}
+.profile__delete:hover,
+.profile__logout:hover {
+  background-color: #E9E6E6;
+}
+.profile__delete-btn,
+.profile__logout-btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 3px  0 0 20px;
+  border: none;
+  background-color: transparent;
+  width: fit-content;
+}
+.profile__delete-btn img {
+  position: relative;
+  top: 5px;
+  height: 19px;
+  width: 19px;
+  margin-right: 14px;
+  margin-left: 1px;
+}
+.profile__logout-btn img {
+  position: relative;
+  top: 7px;
+  height: 20px;
+  width: 20px;
+  margin-right: 13px;
+  margin-left: 3px;
+}

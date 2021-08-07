@@ -1,0 +1,189 @@
+.file {
+  margin: 10px 0;
+  border-bottom: solid 2px #566885;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr 1fr;
+  align-items: center;
+}
+.file:hover {
+  transform: scale(1.02);
+}
+.file__img {
+  justify-self: center;
+  cursor: pointer;
+}
+.file__name {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.file__name span {
+  cursor: pointer;
+}
+.file__date {
+  grid-column-start: 3;
+  justify-self: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.file__size {
+  grid-column-start: 4;
+  justify-self: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.file__btn {
+  display: none;
+  border-radius: 15px;
+  border: 1px solid #566885;
+  background-color: transparent;
+  height: 30px;
+  width: 55px;
+}
+.file__btn:hover {
+  background: rgba(86, 104, 133, 0.1);
+}
+.file__delete img {
+  height: 17px;
+  width: 17px;
+}
+.file__download img {
+  height: 26px;
+  width: 26px;
+}
+.file:hover .file__date {
+  display: none;
+}
+.file:hover .file__size {
+  display: none;
+}
+.file:hover .file__download {
+  position: relative;
+  right: 5px;
+  justify-self: center;
+  grid-column-start: 3;
+  display: block;
+}
+.file:hover .file__delete {
+  position: relative;
+  right: 10px;
+  justify-self: center;
+  grid-column-start: 4;
+  display: block;
+}
+.file-plate {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.file-plate__img {
+  height: 100px;
+  width: 100px;
+}
+.file-plate__name {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 20px;
+  width: 120px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-top: 3px;
+}
+.file-plate__btns {
+  display: none;
+}
+.file-plate__btns button {
+  border-radius: 15px;
+  border: 1px solid #566885;
+  background-color: transparent;
+  height: 25px;
+  width: 45px;
+}
+.file-plate__btns button:hover {
+  background: rgba(86, 104, 133, 0.1);
+}
+.file-plate__delete img {
+  height: 15px;
+  width: 15px;
+}
+.file-plate__download {
+  margin-right: 10px;
+}
+.file-plate__download img {
+  height: 23px;
+  width: 23px;
+}
+.file-plate:hover .file-plate__btns {
+  display: flex;
+}
+.file-plate:hover .file-plate__name {
+  display: none;
+}
+@media (max-width: 710px) {
+  .file {
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+  }
+}
+@media (max-width: 630px) {
+  .file-plate {
+    width: 25%;
+  }
+  .file {
+    grid-template-columns: 60px 4fr 1fr 1fr;
+  }
+}
+@media (max-width: 515px) {
+  .file-plate {
+    width: 33%;
+  }
+  .file {
+    grid-template-columns: 45px 3fr 1fr 1fr;
+  }
+  .file__img {
+    height: 40px;
+  }
+  .file__name {
+    font-size: 13px;
+  }
+  .file__date {
+    font-size: 13px;
+  }
+  .file__size {
+    font-size: 13px;
+  }
+  .file__btn {
+    height: 25px;
+    width: 40px;
+  }
+  .file__delete img {
+    position: relative;
+    top: 1px;
+    height: 14px;
+    width: 14px;
+  }
+  .file__download img {
+    height: 22px;
+    width: 22px;
+  }
+}
+@media (max-width: 390px) {
+  .file-plate {
+    width: 50%;
+  }
+  .file {
+    grid-template-columns: 45px 2fr 1fr 1fr;
+  }
+}

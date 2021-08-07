@@ -1,0 +1,108 @@
+@import "../../../utils/colors";
+
+
+.profile{
+    width: 0;
+    height: 0;
+
+    &__container{
+        top: 27px;
+        border: 2px solid @font-color-light;
+        background-color: #fff;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 220px;
+        right: 220px;
+        z-index: 9999;
+    }
+
+    &__info{
+        display: flex;
+        border-bottom: 1px solid @font-color-light;
+    }
+
+    &__avatar{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 10px;
+    }
+
+    &__firstName , &__lastName{
+        margin: 13px 2px;
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        text-transform: capitalize;
+    }
+
+    &__btns{
+        margin: 7px 0;
+    }
+
+    &__upload{
+        height: 35px;
+        width: 100%;
+
+        &:hover{
+            background-color: @background-color;
+        }
+
+        &-label{
+            font-family: 'Roboto', sans-serif;
+            padding: 7px 0 7px 20px;
+            img{
+                position: relative;
+                top: 5px;
+                height: 22px;
+                width: 22px;
+                margin-right: 9px;
+            }
+        }
+        
+        &-input{
+            display: none;
+        }
+    }
+    
+    &__delete, &__logout{
+        height: 35px;
+        width: 100%;
+
+        &:hover{
+            background-color: @background-color;
+        }
+
+        &-btn{
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            margin: 3px  0 0 20px;
+            border: none;
+            background-color: transparent;
+            width: fit-content;
+        }
+    }
+
+    &__delete-btn{
+        img{
+            position: relative;
+            top: 5px;
+            height: 19px;
+            width: 19px;
+            margin-right: 14px;
+            margin-left: 1px;
+        }
+    }
+
+    &__logout-btn{
+        img{
+            position: relative;
+            top: 7px;
+            height: 20px;
+            width: 20px;
+            margin-right: 13px;
+            margin-left: 3px;
+        }
+    }
+}

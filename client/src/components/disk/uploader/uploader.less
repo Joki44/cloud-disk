@@ -1,0 +1,163 @@
+@import "../../../utils/colors";
+
+.uploader {
+  min-height: 50px;
+  width: 300px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px 20px;
+
+  &__header {
+    border-radius: 3px 3px 0 0;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color:  @font-color;
+    position: fixed;
+  }
+
+  &__title {
+    margin: 14px 10px;
+    width: fit-content;
+    height: fit-content;
+    color: @background-color;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+  }
+  &__btns{
+    display: flex;
+  }
+
+  &__close {
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+    background-color:transparent;
+    border: none;
+    margin:  17px 25px;
+  }
+
+
+  &__hide{
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+    background-color:transparent;
+    border: none;
+    margin:  18px 15px;
+  }
+
+  &__body {
+    margin-top: 48px;
+    overflow: auto;
+    max-height: 250px;
+    width: 300px;
+    background-color: @background-color;
+    border-radius: 0 0 3px 3px;
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+  }
+}
+
+.upload-file {
+  background-color: #fff;
+  margin: 2px 0;
+  padding: 0 10px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 15px 0;
+  }
+
+  &__progress-bar {
+    height: 1rem;
+    border-radius: 8px;
+    background-color: @font-color;
+    display: flex;
+    margin: 3px 0;
+  }
+
+  &__upload-bar {
+    background-color: green;
+    border-radius: 8px;
+  }
+  &__percent {
+    color: @background-color;
+    left: 50%;
+    position: absolute;
+  }
+
+  &__checkmark{
+    padding: 14px 0 0 15px;
+    img{
+      fill: @font-color;
+      color: @font-color;
+    }
+  }
+
+  &__container {
+    padding: 15px 0;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+  }
+
+  &__speeding-wheel {
+    width: 15px;
+    height: 15px;
+    margin: 0 auto;
+    border: 2px solid  @font-color;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: cssload-spin 1100ms infinite linear;
+      -o-animation: cssload-spin 1100ms infinite linear;
+      -ms-animation: cssload-spin 1100ms infinite linear;
+      -webkit-animation: cssload-spin 1100ms infinite linear;
+      -moz-animation: cssload-spin 1100ms infinite linear;
+  }
+
+}
+
+.reverse{
+  transform: rotate(180deg);
+  margin-top: 13px;
+}
+
+@keyframes cssload-spin {
+	100%{ transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-o-keyframes cssload-spin {
+	100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-ms-keyframes cssload-spin {
+	100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-webkit-keyframes cssload-spin {
+	100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes cssload-spin {
+	100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}

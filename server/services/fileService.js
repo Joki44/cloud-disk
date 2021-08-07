@@ -1,0 +1,41 @@
+const fs = require('fs')
+const rimraf = require('rimraf')
+const File = require('../models/File')
+const config = require('config')
+
+class FileService {
+    createDir(req, file) {
+        const filePath = this.getPath(req, file)
+        return new Promise(((resolve, reject) => {
+            try {
+                if(!fs.existsSync(filePath)) {
+                    fs.mkdirSync(filePath, {recursive: true})
+                    return resolve({message: 'File was created'})
+                } 
+                else {
+                    return reject({message: 'File already exist'})
+                }
+            } 
+            catch(e) {
+                return reject({message: e})
+            }
+        }))
+    }
+    
+    deleteFile(req, file) {
+        const path = this.getPath(req, file)
+        if(file.type === 'dir') {
+            rimraf.sync(path)
+        } 
+        else {
+            fs.unlinkSync(path)
+        }
+    }
+
+    getPath(req, file) {
+        return req.filePath + '/' + file.user + '/' + file.path
+    }
+}
+
+
+module.exports = new FileService()

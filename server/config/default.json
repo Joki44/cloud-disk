@@ -1,0 +1,7 @@
+{
+    "serverPort": 5000,
+    "dbUrl": "mongodb+srv://joki4:zprdc100@cloud.l8zr0.mongodb.net/cloud-dick?retryWrites=true&w=majority",
+    "secretKey": "mern-secret-key",
+    "filePath": "/home/joki4/Рабочий стол/projects/javascript/full-stack/mern/server/files/",
+    "staticPath": "/home/joki4/Рабочий стол/projects/javascript/full-stack/mern/server/static"
+}

@@ -1,0 +1,320 @@
+.disk {
+  margin-top: 20px;
+}
+.disk__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.disk__btns {
+  display: flex;
+  flex-wrap: wrap;
+}
+.disk__search {
+  display: flex;
+}
+.disk .loupe {
+  height: 32px;
+  width: 36px;
+  border: 1px solid #566885;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  border-right: none;
+  margin: 0;
+  cursor: text;
+}
+.disk .loupe .icon {
+  margin: 9px 0 0 12px;
+}
+.disk .loupe:hover .icon {
+  position: relative;
+  bottom: 24px;
+  z-index: 999;
+}
+.disk .loupe:hover .icon__container {
+  position: relative;
+  z-index: 1;
+  top: 3px;
+  left: 6px;
+  height: 24px;
+  width: 24px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+}
+.disk__search-input {
+  width: 210px;
+  height: 32px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border: 1px solid #566885;
+  border-left: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+}
+.disk__search-input::placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+.disk__back {
+  border-radius: 15px;
+  border: 1px solid #566885;
+  background-color: transparent;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-left: 12px;
+  cursor: pointer;
+}
+.disk__back img {
+  width: 24px;
+  height: 22px;
+}
+.disk__back:hover {
+  background: rgba(86, 104, 133, 0.1);
+}
+.disk__create-container {
+  display: flex;
+  flex-direction: column;
+}
+.disk__create {
+  margin-left: 15px;
+  border-radius: 15px;
+  border: 1px solid #566885;
+  background-color: transparent;
+  height: 31px;
+  width: 90px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+}
+.disk__create:hover {
+  background: rgba(86, 104, 133, 0.1);
+}
+.disk__upload {
+  margin-left: 15px;
+  border-radius: 15px;
+  height: 31px;
+  width: 134px;
+  border: 1px solid #566885;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+}
+.disk__upload:hover {
+  background: rgba(86, 104, 133, 0.1);
+}
+.disk__upload-label {
+  position: relative;
+  top: 6px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.disk__upload-input {
+  display: none;
+}
+.disk__select {
+  margin-top: 4px;
+  margin-left: auto;
+}
+.disk__select span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+.disk__select span img {
+  margin-left: 3px;
+}
+.disk__select .line {
+  border-bottom: 2px solid #566885;
+}
+.disk__select ul {
+  padding-top: 2px;
+  position: absolute;
+  z-index: 9999;
+}
+.disk__select ul li {
+  padding-top: 2px;
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+.disk__select .hidden {
+  visibility: hidden;
+}
+.disk__list,
+.disk__plate {
+  height: 20px;
+  width: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: no-repeat center center;
+  background-size: contain;
+  margin: 5px 10px 0 10px;
+}
+.disk__list {
+  background-image: url("../../assets/img/list.svg");
+}
+.disk__plate {
+  background-image: url("../../assets/img/plate.svg");
+}
+.drop-area {
+  width: 100%;
+  height: calc(100vh - 50px - 40px);
+  margin: 20px;
+  border: dashed #566885 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+.drop-down-create {
+  width: 0;
+  height: 0;
+}
+.drop-down-create__container {
+  position: relative;
+  z-index: 999;
+  width: 130px;
+  background: #E9E6E6;
+  left: 15px;
+  bottom: 31px;
+  border: 1px solid #566885;
+  border-radius: 3px;
+}
+.drop-down-create__header {
+  height: 30px;
+  width: 100%;
+  color: #E9E6E6;
+  background: #566885;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.drop-down-create__btns {
+  margin: 5px 0;
+}
+.drop-down-create__create-dir-container {
+  height: 27px;
+  width: 100%;
+}
+.drop-down-create__create-dir-container:hover {
+  background-color: rgba(0, 0, 0, 0.384);
+}
+.drop-down-create__create-dir {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #566885;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.drop-down-create__upload {
+  height: 27px;
+  width: 100%;
+}
+.drop-down-create__upload:hover {
+  background-color: rgba(0, 0, 0, 0.384);
+}
+.drop-down-create__upload-label {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  color: #566885;
+  font-size: 14px;
+  margin-left: 10px;
+  top: 4px;
+}
+.drop-down-create__upload-input {
+  display: none;
+}
+.popup {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup__content {
+  margin: 0 20px;
+  width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.popup__title {
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+.popup__close {
+  color: #566885;
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.popup__create {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #566885;
+  align-self: flex-end;
+  border-radius: 15px;
+  border: 1px solid #566885;
+  background-color: transparent;
+  height: 34px;
+  width: 90px;
+  cursor: pointer;
+}
+.popup__header {
+  display: flex;
+  justify-content: space-between;
+}
+.popup input {
+  margin: 25px 0px 20px 0;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 50px);
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #566885;
+  border-color: #566885 transparent #566885 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

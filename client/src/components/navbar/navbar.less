@@ -1,0 +1,87 @@
+@import "../../utils/colors";
+
+.navbar {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+
+  &__header {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  &__auth {
+    margin-left: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    a{
+      text-decoration: none;
+    }
+  }
+
+  &__avatar {
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+.container {
+  width: 1140px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1250px){
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px){
+  .container {
+    .navbar__header{
+      margin-left: 5px;
+      font-size: 21px;
+    }
+
+    .navbar__logo{
+      width: 50px;
+      height: 50px;
+    }
+
+    .navbar__avatar{
+      width: 35px;
+      height: 35px;
+    }
+
+    .navbar__auth{
+      margin-right: 5px;
+      a{
+        font-size: 16px;
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 500px){
+  .container {
+    .navbar__header{
+      font-size: 18px;
+    }
+    
+    .navbar__auth{
+      a{
+        font-size: 15px;
+      }
+    }
+  }
+}

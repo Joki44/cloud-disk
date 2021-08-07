@@ -1,0 +1,236 @@
+@import "../../../../utils/colors";
+
+.file {
+  margin: 10px 0;
+  border-bottom: solid 2px @font-color ;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr 1fr;
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &__img {
+    justify-self: center;
+    cursor: pointer;
+  }
+
+  &__name {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+
+    span{
+      cursor: pointer;
+    }
+  }
+
+  &__date {
+    grid-column-start: 3;
+    justify-self: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &__size {
+    grid-column-start: 4;
+    justify-self: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &__btn {
+    display: none;
+    border-radius: 15px;
+    border: 1px solid @font-color;
+    background-color:transparent;
+    height: 30px;
+    width: 55px;
+
+    &:hover{
+      background: rgba(86, 104, 133, 0.1);
+    }
+  }
+
+  &__delete {
+    img{
+      height: 17px;
+      width: 17px;
+    }
+  }
+
+  &__download {
+    img{
+      height: 26px;
+      width: 26px;
+    }
+  }
+
+  &:hover &__date {
+    display: none;
+  }
+
+  &:hover &__size {
+    display: none;
+  }
+
+  &:hover &__download {
+    position: relative;
+    right: 5px;
+    justify-self: center;
+    grid-column-start: 3;
+    display: block;
+  }
+
+  &:hover &__delete {
+    position: relative;
+    right: 10px;
+    justify-self: center;
+    grid-column-start: 4;
+    display: block;
+  }
+}
+
+.file-plate {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    height: 100px;
+    width: 100px;
+  }
+
+  &__name {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 20px;
+    width: 120px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  &__btns {
+    display: none;
+    button{
+      border-radius: 15px;
+      border: 1px solid @font-color;
+      background-color:transparent;
+      height: 25px;
+      width: 45px;
+      &:hover{
+        background: rgba(86, 104, 133, 0.1);
+      }
+    }
+  }
+
+  &__delete {
+    img{
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  &__download {
+    img{
+      height: 23px;
+      width: 23px;
+    }
+    margin-right: 10px;
+  }
+
+  &:hover &__btns {
+    display: flex;
+  }
+
+
+  &:hover &__name {
+    display: none;
+  }
+}
+
+@media (max-width: 710px){
+  .file {
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 630px){
+
+  .file-plate {
+    width: 25%;
+  }
+
+  .file {
+    grid-template-columns: 60px 4fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 515px){
+  .file-plate {
+    width: 33%;
+  }
+  .file {
+    grid-template-columns: 45px 3fr 1fr 1fr;
+  
+    &__img {
+      height: 40px;
+    }
+  
+    &__name {
+      font-size: 13px;
+    }
+  
+    &__date {
+      font-size: 13px;
+    }
+    &__size {
+      font-size: 13px;
+    }
+
+    &__btn {
+      height: 25px;
+      width: 40px;
+    }
+  
+    &__delete {
+      img{
+        position: relative;
+        top: 1px;
+        height: 14px;
+        width: 14px;
+      }
+    }
+  
+    &__download {
+      img{
+        height: 22px;
+        width: 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: 390px){
+  .file-plate {
+    width: 50%;
+  }
+  .file {
+    grid-template-columns: 45px 2fr 1fr 1fr;
+  }
+}
